@@ -41,7 +41,17 @@ public class SinglyList {
         return node;
     }
 
-
+    // 遍历单链表,寻找到第一个值等于val的结点
+    SinglyListNode queryNode(int val) {
+        SinglyListNode cur = head;
+        while (cur != null) {
+            if (cur.val == val) {
+                return cur;
+            }
+            cur = cur.next;
+        }
+        return null;
+    }
 
     // 遍历整个链表...
     void  travel(SinglyListNode head) {
@@ -62,5 +72,7 @@ public class SinglyList {
         head = list.addBeforeHead(1); // 1 -> 6 -> 2 -> 3  // 重新设置头节点
         list.addAfterTail(100); // 1 -> 6 -> 2 ->3 -> 100
         list.travel(head);
+        SinglyListNode n = list.queryNode(2);
+        System.out.println(n.val);
     }
 }
