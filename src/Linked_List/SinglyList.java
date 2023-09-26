@@ -53,6 +53,40 @@ public class SinglyList {
         return null;
     }
 
+    // 改 val -> new_val
+    SinglyListNode updateNode(int val, int new_val) {
+        SinglyListNode cur = head;
+        while (cur != null) {
+            if (cur.val == val) {
+                cur.val = new_val ;
+            }
+            cur = cur.next;
+        }
+        return head;
+    }
+
+    // 删, 删掉所有值为val的结点
+    // 我这样写在删除节点是中间内部结点，尾部结点的时候都是奏效的. 但是是head结点的时候就不奏效了...
+    SinglyListNode deleteNode(int val) {
+        if (head.val == val) {
+            head = head.next;
+//            return head;
+        }
+
+        SinglyListNode prev = head;
+        SinglyListNode cur = head.next;
+        while (cur != null) {
+            if (cur.val == val) {
+                prev.next = cur.next;
+            }
+            prev = cur;
+            cur = cur.next;
+        }
+        return head;
+    }
+
+
+
     // 遍历整个链表...
     void  travel(SinglyListNode head) {
         SinglyListNode cur = new SinglyListNode(head.val);
@@ -74,5 +108,9 @@ public class SinglyList {
         list.travel(head);
         SinglyListNode n = list.queryNode(2);
         System.out.println(n.val);
+        list.updateNode(3, 3333);// 1 -> 6 -> 2 -> 3333 -> 100
+        list.travel(head);
+        head = list.deleteNode(1);
+        list.travel(head);  // 6 -> 2 -> 3333 -> 100
     }
 }
