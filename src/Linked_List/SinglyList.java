@@ -8,10 +8,13 @@ package src.Linked_List;
 不走,永远不会犯错,但是不犯错,永远不会成长的。。。
 **/
 public class SinglyList {
+    SinglyListNode dummy;   //增加虚拟节点
     SinglyListNode head;
-    SinglyList (SinglyListNode node) {
+    SinglyList (SinglyListNode dum , SinglyListNode node) {
         // System.out.print(node.val);
+        dummy = dum;
         head = node;
+        dummy.next = head;
     }
 
     // 在prev节点之后插入增加一个值为val的新节点
@@ -99,18 +102,20 @@ public class SinglyList {
 
 
     public static void main(String args[]) {
+        SinglyListNode dummy = new SinglyListNode(-1);  //虚拟头结点
         SinglyListNode head = new SinglyListNode(6);
-        SinglyList list = new SinglyList(head);
+        SinglyList list = new SinglyList(dummy ,head);
         list.addNode(head, 3);
         list.addNode(head, 2);// 6 -> 2 -> 3
-        head = list.addBeforeHead(1); // 1 -> 6 -> 2 -> 3  // 重新设置头节点
-        list.addAfterTail(100); // 1 -> 6 -> 2 ->3 -> 100
-        list.travel(head);
-        SinglyListNode n = list.queryNode(2);
-        System.out.println(n.val);
-        list.updateNode(3, 3333);// 1 -> 6 -> 2 -> 3333 -> 100
-        list.travel(head);
-        head = list.deleteNode(1);
-        list.travel(head);  // 6 -> 2 -> 3333 -> 100
+        //head = list.addBeforeHead(1); // 1 -> 6 -> 2 -> 3  // 重新设置头节点
+        //list.addAfterTail(100); // 1 -> 6 -> 2 ->3 -> 100
+        list.addNode(dummy, 26);
+        list.travel(dummy);
+//        SinglyListNode n = list.queryNode(2);
+//        System.out.println(n.val);
+//        list.updateNode(3, 3333);// 1 -> 6 -> 2 -> 3333 -> 100
+//        list.travel(head);
+//        head = list.deleteNode(1);
+//        list.travel(head);  // 6 -> 2 -> 3333 -> 100
     }
 }
