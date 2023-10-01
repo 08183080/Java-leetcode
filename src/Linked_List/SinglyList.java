@@ -88,6 +88,45 @@ public class SinglyList {
         return head;
     }
 
+    int  getLength(SinglyListNode head) {
+        int cnt = 0;        // 获取链表数目
+        SinglyListNode cur = head;
+        while (cur != null) {
+            cur = cur.next;
+            cnt++;
+        }
+        return cnt;
+    }
+
+
+    // 删除倒数第N个结点
+    SinglyListNode deleteRNthNode(SinglyListNode head, int n) {
+        int cnt = getLength(head);  //链表长度
+        SinglyListNode dummy = new SinglyListNode(-1);  // 虚拟头节点
+        dummy.next = head;
+        SinglyListNode cur = dummy;
+        for (int i = 1; i < cnt - n + 1; i++) {
+            cur = cur.next;
+        }
+        cur.next = cur.next.next;
+        SinglyListNode ans = dummy.next;
+        return ans;
+    }
+
+    // 删除链表的第N个结点
+    SinglyListNode deleteNthNode(SinglyListNode head, int n) {
+        SinglyListNode dummy = new SinglyListNode(-1);
+        dummy.next = head;
+        SinglyListNode cur = dummy;
+        for (int i = 1; i < n; i++) {
+            cur = cur.next;
+        }
+        cur.next = cur.next.next;
+        SinglyListNode ans = dummy.next;
+        return ans;
+    }
+
+
 
 
     // 遍历整个链表...
@@ -107,10 +146,15 @@ public class SinglyList {
         SinglyList list = new SinglyList(dummy ,head);
         list.addNode(head, 3);
         list.addNode(head, 2);// 6 -> 2 -> 3
+        list.addNode(head, 4);
         //head = list.addBeforeHead(1); // 1 -> 6 -> 2 -> 3  // 重新设置头节点
         //list.addAfterTail(100); // 1 -> 6 -> 2 ->3 -> 100
-        list.addNode(dummy, 26);
-        list.travel(dummy);
+//        list.addNode(dummy, 26);
+//        list.travel(dummy);
+//        System.out.println(list.getLength(head));
+        list.travel(head);
+        head = list.deleteNthNode(head,1);
+        list.travel(head);
 //        SinglyListNode n = list.queryNode(2);
 //        System.out.println(n.val);
 //        list.updateNode(3, 3333);// 1 -> 6 -> 2 -> 3333 -> 100
