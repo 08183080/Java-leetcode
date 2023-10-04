@@ -40,6 +40,10 @@
 - [ ] 堆排序（Heap Sort）
 - [ ] 研究Java的PriorityQueue源代码
 
+# Java 动态规划dp篇
+- [ ] 状态机dp
+  - [ ] 股票问题
+
 # Java基础
 [Java学习路线](https://interviewguide.cn/notes/02-learning_route/02-language/04-Java.html#%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5-java%E5%9F%BA%E7%A1%80)
 - [ ] 10月第一周,将上月鸽子没有看的【Java基础】过一遍吧【JavaSE】
