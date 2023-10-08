@@ -1,4 +1,4 @@
-package src;
+package src.leetcode;
 /*
 * 9-26 数学推理
 * */

@@ -1,4 +1,4 @@
-package src;
+package src.leetcode;
 
 public class D10_3 {
     public static int maxProfit(int[] prices) {

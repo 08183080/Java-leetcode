@@ -46,7 +46,8 @@
 
 # Java基础
 [Java学习路线](https://interviewguide.cn/notes/02-learning_route/02-language/04-Java.html#%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5-java%E5%9F%BA%E7%A1%80)
-- [ ] 10月第一周,将上月鸽子没有看的【Java基础】过一遍吧【JavaSE】
+- [ ] 10月第二周,将上月鸽子没有看的【Java基础】过一遍吧【JavaSE】\
+第一周光忙着做我接的项目了...
   - [ ] 将油管看到的python oop视频看完，和java的oop视频对比来看
   - [ ] Java 数据类型、核心语法
   - [ ] Java面向对象OOP

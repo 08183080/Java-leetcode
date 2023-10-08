@@ -1,4 +1,4 @@
-package src;public class D10_1 {
+package src.leetcode;public class D10_1 {
     public int maxProfit(int[] prices) {
         // dp[i] = nums[i] - min(nums[0...i-1])
         // max(dp[0...n-1])

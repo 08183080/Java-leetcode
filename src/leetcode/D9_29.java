@@ -1,4 +1,4 @@
-package src;
+package src.leetcode;
 
 public class D9_29 {
     /*

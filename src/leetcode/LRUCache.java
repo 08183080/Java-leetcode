@@ -1,4 +1,4 @@
-package src;/*
+package src.leetcode;/*
 * 2023/9/24 雨天 细雨蒙蒙
 * 周日 宿舍将近11点起床的...
 * 【146.LRU缓存】
