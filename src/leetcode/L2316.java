@@ -27,7 +27,7 @@ public class L2316 {
             {0=[1, 2], 1=[2]}
         * */
         //[0,2] and [2,4] -> [0,4]
-        
+
     }
 
     public static void main(String args[]) {
